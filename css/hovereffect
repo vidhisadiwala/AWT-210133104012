@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hover effect</title>
+    <style type="text/css">
+        .a1 li ul li{display: none;}
+        .a1 li:hover ul li{display: block;}
+        .a1 li:hover ul li ul li{display: none;}
+        .a1 li ul li:hover ul li{display: block;}
+        .a1 li ul li:hover ul li  ul li{display: none;}
+        .a1 li ul li ul li:hover ul li {display: block;}
+
+
+    </style>
+</head>
+<body>
+    <ul class="a1">
+        <li>Google
+            <ul>
+                <li>Gmail
+                    <ul>
+                        <li>Sign up</li>
+                        <li>Sign in
+                            <ul>
+                                <li>Sign in as Admin</li>
+                                <li>Sign in as Member</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Assistant</li>
+                <li>Classroom</li>
+                <li>Gmap</li>
+            </ul>
+        </li>
+        <li>twitter</li>
+        <li>Microsoft
+            <ul>
+                <li>Sign up</li>
+                <li>Sign in
+                    <ul>
+                        <li>Sign in as Admin</li>
+                        <li>Sign in as Member</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Yahoo</li>
+        <li>Amazon
+            <ul>
+                <li>Order</li>
+                <li>cart</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
