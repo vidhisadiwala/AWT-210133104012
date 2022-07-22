@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Jquery</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("#textfocus").focus(function(){
+                    $(this).css("background-color","lightpink");
+                });
+                $("#textBlur").blur(function(){
+                    $(this).css("background-color","lightpink");
+                });
+                $("#textKeyPress").keypress(function(){
+                    alert($(this).val());
+                });
+                $("#textKeyUp").keyup(function(){
+                    alert($(this).val());
+                });
+                
+            });
+        </script>
+
+    </head>
+    <body>
+        <input type="text" id="textfocus" placeholder="Check Text Box Focus Event..." /><hr/>
+		<input type="text" id="textBlur" placeholder="Check Text Box Blur Event..." /><hr/>
+		<input type="text" id="textKeyPress" placeholder="Check Text Box Key Press Event..." /><hr/>
+		<input type="text" id="textKeyUp" placeholder="Check Text Box Key Up Event..." /><hr/>
+    </body>
+</html>
