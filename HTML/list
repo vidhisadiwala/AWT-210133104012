@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<title>List</title>
+	</head>
+	<body>
+		<h3>Unordered List</h3>
+		<ul>
+			<li>CROME</li>
+			<li>OPERA</li>
+			<li>BING</li>
+			<li>FIREFOX</li>
+		</ul>
+		<h3>Ordered List</h3>
+		<ol>
+			<li>WHATSAPP</li>
+			<li>FACEBOOK</li>
+			<li>INSTAGRAM</li>
+			<li>TWITTER</li>
+		</ol>
+		<h3>Definition List</h3>
+		<dl>
+			<dt>GOOGLE</dt>
+			<dd>Serach Engine</dd>
+			<dt>FACEBOOK</dt>
+			<dd>Social Media</dd>
+			<dt>MSN</dt>
+			<dd>Ecommerce</dd>
+			<dt>BING</dt>
+			<dd>Microsoft Search Engine</dd>
+		</dl>
+		<h3>Nested List</h3>
+		<ul>
+			<li>GOOGLE
+				<ul>
+					<li>Gmail
+						<ol>
+							<li>Sign In</li>
+							<li>Sign Up</li>
+						</ol>
+					</li>
+					<li>GDrive</li>
+					<li>GMap</li>
+				</ul>
+			</li>
+			<li>CLASSROOM</li>
+			<li>GMAP</li>
+			<li>BING</li>
+		</ul>
+	</body>
+</html>
