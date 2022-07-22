@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <title>Document</title>
+    <style type="text/css">
+        div
+        {
+            margin-top: 100px;
+            margin-left: 100px;
+            width: 200px;
+            height: 200px;
+            background-color: gray;
+            border: solid black;
+            position: relative;
+            animation-name: hi;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes hi{
+            0%{background-color:red; left:0px; top:0px;transform:rotate(0deg);}
+            25%{background-color: orange; left: 100px; top: 0px; transform: rotate(90deg);}
+            50%{background-color:greenyellow; left: 100px; top: 100px; transform: rotate(180deg);}
+            75%{background-color:lightgoldenrodyellow ; left: 0px; top: 100px; transform: rotate(270deg);}
+            100%{background-color:yellow; left: 0px; top: 0px; transform: rotate(360deg);}
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
