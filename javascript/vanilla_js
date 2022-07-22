@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Js</title>
+    <script src="./External.js"></script>
+    <style>
+        .box{
+            height: 250px;
+            width: 250px;
+            background-color: red;
+            margin: 20px;
+        }
+    </style>
+    <script>
+        function alertfun()
+        {alert('Internal script')}
+        function confirmfun()
+        {confirm('Internal script')}
+        function promptfun()
+        {prompt('Internal script')}
+        function background()
+        {document.body.style.background=document.getElementById("bg").value}
+        function divchange()
+        {document.getElementById("color").style.background=document.getElementById("div").value}
+    </script>
+</head>
+<body>
+    <div class="box" id="color"></div>
+    <input type="button" value="alert" onclick="alert('Inline script')">
+    <input type="button" value="confirm" onclick="confirm('Inline script')">
+    <input type="button" value="prompt" onclick="prompt('Inline script')"><hr>
+    <input type="button" value="alert" onclick="alertfun()">
+    <input type="button" value="confirm" onclick="confirmfun()">
+    <input type="button" value="prompt" onclick="promptfun()"><hr>
+    <input type="button" value="alert" onclick="alertfunex()">
+    <input type="button" value="confirm" onclick="confirmfunex()">
+    <input type="button" value="prompt" onclick="promptfunex()"><hr>
+    <input type="color" id="bg" onchange="background()">
+    <input type="color" id="div" onchange="divchange()">
+    
+    
+</body>
+</html>
