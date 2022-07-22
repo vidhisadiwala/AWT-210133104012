@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        td,th,tr
+        {
+            border: 2px solid black;
+            text-align: center;
+        }
+        .A1
+        {
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <b><u><h2>TIME - TABLE [5th - C]</h2></u></b>
+    <table>
+        <thead>
+             <tr >
+                <td class="A1"> </td>
+                
+            </tr>
+            <tr>
+                <th><b>Time</b></th>
+                <th><b>Monday</b></th>
+                <th><b>Tuesday</b></th>
+                <th><b>Wednesday</b></th>
+                <th><b>Thursday</b></th>
+                <th><b>Friday</b></th>
+                <th><b>Saturday</b></th>
+            </tr>
+        </thead>
+        <tbody>
+           
+            <tr>
+                <td><b>08:30 TO 09:20</b></td>
+                <td rowspan="2">C1:CS(DS)505/A<br/>C2:ADA(DR)507/A<br/>C3:CS(NKP)507/B</td>
+                <td rowspan="2">C1:AWT(VP)501<br/>C2:AWT(VP)508</td>
+                <td rowspan="2">AWT(VP)B-412<br/>AWT(VP)B-412</td>
+                <td rowspan="2">C1:AWT(VP)-501<br/>C2:AWT(VP)-508</td>
+                <td rowspan="2">C1:AWT(VP)-501<br/>C2:AWT(VP)-508</td>
+                <td rowspan="2">AWT(VP)-B-412<br/>AWT(VP)-B-412</td>
+            </tr>
+            <tr>
+                <td><b>09:20 TO 10:10</b></td>
+                
+            </tr>
+            <tr>
+                <td><b>10:10 TO 10:20</b></td>
+                <td colspan="6" align="center"><b>RECESS</b></td>
+            </tr>
+            <tr>
+                <td><b>10:20 TO 11:10</b></td>
+                <td>AWT(VP)-B-412</td>
+                <td>AWT(VP)B-411</td>
+                <td rowspan="2">C1:AWT(VP)501<br/>C2:AWT(VP)508</td>
+                <td>AWT(VP)B-412</td>
+                <td>AWT(VP)B-411</td>
+                <td rowspan="2">C1:AWT(VP)501<br/>C2:AWT(VP)508</td>
+            </tr>
+            <tr>
+                <td><b>11:10 TO 12:00</b></td>
+                <td>AWT(VP)B-412</td>
+                <td>AWT(VP)B-411</td>
+                <td>AWT(VP)B-412</td>
+                <td>AWT(VP)B-411</td>
+            </tr>
+            <tr>
+                <td><b>12:00 TO 12:20</b></td>
+                <td colspan="6" align="center"><b>RECESS</b></td>
+            </tr>
+            <tr>
+                <td><b>12:20 TO 01:10</b></td>
+                <td rowspan="2">C1:AWT(VP)-501<br/>C2:AWT(VP)-508</td>
+                <td rowspan="2">C1:SE(DS)-505/A<br/>C2:SE(KP)-507/A<br/>C3:NT(AD)-507/B</td>
+                <td>CS(NKP)-B-412</td>
+                <td>CS(DS)-B-412</td>
+                <td rowspan="2">C1:ADA(DR)-507/A<br/>C2:NT(AD)-507/A<br/>C3:SE(KP)-505/A</td>
+                <td rowspan="2">C1:NT(AD)-507/B<br/>C2:CS(DS)-505/A<br/>C3:ADA(VNT)-507/A</td>
+            </tr>
+            <tr>
+                <td><b>01:10 TO 02:00</b></td>
+                <td>ADA(VNT)B-412</td>
+                <td>ADA(DR)B-412</td>
+            </tr>
+            <tr>
+                <td><b>02:00 TO 02:10</b></td>
+                <td colspan="6" align="center"><b>RECESS</b></td>
+            </tr>
+            <tr>
+                <td><b>01:10 TO 02:00</b></td>
+                <td>ADA(DR)-B-414</td>
+                <td>CS(NKP)-B-414</td>
+                <td>SE(DS)B-414</td>
+                <td>NT(AD)B-414</td>
+                <td>ADA(VNT)B-414</td>
+                <td>ABPS-II</td>
+            </tr>
+        </tbody>
+    </table><br>
+    <table>
+        <thead>
+            <tr>
+            <th rowspan="2"><b>Subject Code</b></th>
+            <th rowspan="2"><b>Subject Name</b></th>
+            <th><b>Teaching Scheme</b></th>
+            <th rowspan="2"><b>Faculty Name</b></th>
+            </tr>
+            <tr>
+                <th>L+T+P=C</th>
+            </tr>
+            
+        </thead>
+        <tbody>
+            <tr>
+                <td>1010043316</td>
+                <td>Analysis and Design of Algorithm(ADA)</td>
+                <td>4+0+2=5</td>
+                <td>Prof. Vikash Tulshyan(VNT), Prof. Deepa R(DR)</td>          
+            </tr>
+            <tr>
+                <td>  </td>
+                <td>Network Technology(NT)</td>
+                <td>1+0+2=2</td>
+                <td>Prof. Anuradha Desai(AD)</td>          
+            </tr>
+            <tr>
+                <td>1010043318</td>
+                <td>Adwance Web Technology(AWT)</td>
+                <td>12+0+12=10</td>
+                <td>Prof. Vagmita Pandya(VP)</td>          
+            </tr>
+            <tr>
+                <td>  </td>
+                <td>Software Engineering(SE)</td>
+                <td>1+0+2=2</td>
+                <td>Prof. Darshan Sagar(AD), prof. Kruti Patel</td>          
+            </tr>
+            <tr>
+                <td>1010043362</td>
+                <td>Cyber Security(CS)</td>
+                <td>3+0+2=4</td>
+                <td>Prof. Niyati Pandit(NKP), prof. Darshan Sagar(DS)</td>          
+            </tr>
+            <tr>
+                <td>1010343381</td>
+                <td>Aptitude Building & Pofessional Skills - 2(ABPS-2)</td>
+                <td>0+1+0=1</td>
+                <td>Prof. Bhoomi Parmar(T&P)</td>          
+            </tr>
+           
+        </tbody>
+    </table>
+    </center>
+</body>
+</html>
