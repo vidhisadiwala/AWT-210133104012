@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registration form</title>
+</head>
+<body >
+    <h1 align="center"><u>Registration Page</u></h1>
+    <table align="center">
+        <form>
+           <td><p><u>User Details</u></p></td>
+
+            <tr>
+                <td align="right" colspan="2">Login Id</td>
+                <td ><input type="Text" id="Item" name="log in" ></td>
+            </tr>
+            <tr>
+                <td align="right" colspan="2">Password</td>
+                <td ><input type="password"  id="Item" name="password"></td>
+            </tr>
+            <tr>
+                <td align="right" colspan="2">Confirm Password</td>
+                <td><input type="text" name="CNF PSWORD"</td>
+
+            </tr>
+
+                <td ><p><u>Personal Details</u></p></td>
+               
+            <tr>
+                
+                <td  align="right">First Name</td>
+                <td ><input type="Text" id="Item" name="fname"></td>
+            </tr>
+            <tr>
+                <td  align="right">Middle Name</td>
+                <td><input type="Text"  name="mname"></td>
+                <td  align="right">Last Name</td>
+                <td ><input type="Text"  name="lname"></td>
+            </tr>
+            <tr>
+                <td  align="right">Resident </td>
+                <td> <select name="Status" >
+                    <option no.1>1</option>
+                    <option no.2>2</option>
+                    <option no.3>3</option>
+                    <option no.4>4</option></select>
+                </td>
+                <td  align="right">country</td>
+                <td> <select name="country" >
+                    <option no.1>India</option>
+                    <option no.2>Japan</option>
+                    <option no.3>China</option>
+                    <option no.4>U.S.A.</option></select>
+                </td>
+            </tr>
+            <tr>
+                <td  align="right">Email-id</td>
+                <td><input type="email"  name="email"></td>
+                <td  align="right">Mobile Number</td>
+                <td><input type="number"   name="number"></td>
+            </tr>
+             <hr/>   
+            <tr>
+                <td colspan="4" ><input type="checkbox">I have read, understood and hereby agree to the terms and conditions in respect of all product of products and channel
+                </td>
+            </tr>
+            <tr>
+                 <td  colspan="2" align="right"><input type="submit"></td>
+                <td><input type="reset" ></td>
+            </tr>
+        </form>
+    </table>
+    
+</body>
+</html>
