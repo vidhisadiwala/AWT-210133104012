@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <i class="fa fa-address-book" style="font-size: 50px;"></i><br><hr/>
+    <i class="fa fa-facebook-square" aria-hidden="true" style="font-size: 50px;color: blue;"></i><br><hr/>
+    <i class="fa fa-instagram" aria-hidden="true" style="font-size: 50px; color: palevioletred;"></i><br><hr/>
+    <i class="fa fa-desktop" aria-hidden="true" style="font-size: 50px; color: grey;"></i><br><hr/>
+    <i class="fa fa-unlock-alt" aria-hidden="true" style="font-size: 50px; color: palevioletred;"></i><br><hr/>
+    <i class="fa fa-unlock" aria-hidden="true" style="font-size: 50px; color: mediumvioletred;"></i><br><hr/>
+    <i class="fa fa-camera-retro" aria-hidden="true" style="font-size: 50px; color: blue;"></i><br><hr/>
+    <i class="fa fa-home" aria-hidden="true" style="font-size: 50px; color: violetred;"></i><br><hr/>
+</body>
+</html>
