@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Validations</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
+		
+		<script type="text/javascript">
+			
+			//Reg Ex Declaration - Globaly.
+			var $FNameLNameRegEx = /^([a-zA-Z]{2,20})$/;
+			var $FullNameRegEx = /^([a-zA-Z ]{2,40})$/;
+			var $BankAccountNameRegEx = /^([a-zA-Z ]{2,60})$/;
+			var $PasswordRegEx = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[^\w\s]).{8,12}$/;
+
+			var $EmailIdRegEx = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,8}\b$/i;
+			var $ConNoRegEx = /^([0-9]{10})$/;
+			var $AgeRegEx = /^([0-9]{1,2})$/;
+			var $AadhaarNoRegEx = /^([0-9]{12})$/;
+			var $GSTNoRegEx=/^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}$/;
+			var $IndianDrivingLicenseNoRegEx = /^([A-Z]{2,3}[-/0-9]{8,13})$/;
+			var $IndianVehicleRegNoRegEx = /^([A-Z]{2}[0-9]{1,2}[A-Z]{1,3}[0-9]{1,4})$/;
+			var $PincodeRegEx = /^[1-9][0-9]{5,6}$/;
+			var $PANNoRegEx = /^[A-Z]{3}[ABCFGHLJPT][A-Z][0-9]{4}[A-Z]$/;
+			var $IFSCCodeRegEx = /^[A-Za-z]{4}0[A-Z0-9a-z]{6}$/;
+			var $BankAccountNoRegEx = /^([0-9]{9,18})$/;
+			var $LatitudeLongitude=/^(-?(?:1[0-7]|[1-9])?\d(?:\.\d{1,8})?|180(?:\.0{1,8})?)$/;
+        
+			
+			$(document).ready(function(){
+
+				$("#Name").blur(function(){
+					$("#NameValidation").empty();
+					if($(this).val()=="" || $(this).val()==null){
+						$("#NameValidation").html("(*) Name required..!!");
+					}
+					else{
+						if(!$(this).val().match($FullNameRegEx)){
+							$("#NameValidation").html("(*) Invalid name..!!");
+						}
+					}
+				});
+
+				$("#Name").keypress(function(e){
+					$("#NameValidation").empty();
+					var Flag=((e.which>=65 && e.which<=90) || (e.which>=97 && e.which<=121));
+					if(Flag==false){
+						$("#NameValidation").html("Invalid Input..!!");
+					}
+					return Flag;
+				});
+
+				$("#ContactNo").blur(function(){
+					$("#ContactNoValidation").empty();
+					if($(this).val()=="" || $(this).val()==null){
+						$("#ContactNoValidation").html("(*) Contact no. required..!!");
+					}
+					else{
+						if(!$(this).val().match($ConNoRegEx)){
+							$("#ContactNoValidation").html("(*) Invalid contact no..!!");
+						}
+					}
+				});
+
+				$("#ContactNo").keypress(function(e){
+					$("#ContactNoValidation").empty();
+					var Flag=(e.which>=48 && e.which<=57);
+					if(Flag==false){
+						$("#ContactNoValidation").html("Invalid Input..!!");
+					}
+					return Flag;
+				});
+
+
+				$("#EmailId").blur(function(){
+					$("#EmailIdValidation").empty();
+					if($(this).val()=="" || $(this).val()==null){
+						$("#EmailIdValidation").html("(*) Email id required..!!");
+					}
+					else{
+						if(!$(this).val().match($EmailIdRegEx)){
+							$("#EmailIdValidation").html("(*) Invalid email id..!!");
+						}
+					}
+				}); 
+
+				$("#ContactMsg").blur(function(){
+					$("#ContactMsgValidation").empty();
+					if($(this).val()=="" || $(this).val()==null){
+						$("#ContactMsgValidation").html("(*) Contact message required..!!");
+					}
+					else{
+						if($("#ContactMsg").val().length>300){
+							$("#ContactMsgValidation").html("(*) Invalid contact message..!!");
+						}
+					}
+				});
+
+				var NameFlag=false,ContactNoFlag=false,EmailIdFlag=false,ContactMsgFlag=false;
+
+				$("#BtnSubmit").click(function(){
+					$("#NameValidation").empty();
+					if($("#Name").val()=="" || $("#Name").val()==null){
+						$("#NameValidation").html("(*) Name required..!!");
+						NameFlag=false;
+					}
+					else{
+						if(!$("#Name").val().match($FullNameRegEx)){
+							$("#NameValidation").html("(*) Invalid name..!!");
+							NameFlag=false;
+						}
+						else{
+							NameFlag=true;
+						}
+					}
+					$("#ContactNoValidation").empty();
+					if($("#ContactNo").val()=="" || $("#ContactNo").val()==null){
+						$("#ContactNoValidation").html("(*) Contact no. required..!!");
+						ContactNoFlag=false;
+					}
+					else{
+						if(!$("#ContactNo").val().match($ConNoRegEx)){
+							$("#ContactNoValidation").html("(*) Invalid contact no..!!");
+							ContactNoFlag=false;
+						}
+						else{
+							ContactNoFlag=true;
+						}
+					}
+					$("#EmailIdValidation").empty();
+					if($("#EmailId").val()=="" || $("#EmailId").val()==null){
+						$("#EmailIdValidation").html("(*) Email id required..!!");
+						EmailIdFlag=false;
+					}
+					else{
+						if(!$("#EmailId").val().match($EmailIdRegEx)){
+							$("#EmailIdValidation").html("(*) Invalid email id..!!");
+							EmailIdFlag=false;
+						}
+						else{
+							EmailIdFlag=true;
+						}
+					}
+					$("#ContactMsgValidation").empty();
+					if($("#ContactMsg").val()=="" || $("#ContactMsg").val()==null){
+						$("#ContactMsgValidation").html("(*) Contact message required..!!");
+						ContactMsgFlag=false;
+					}
+					else{
+						if($("#ContactMsg").val().length>300){
+							$("#ContactMsgValidation").html("(*) Invalid contact message..!!");
+							ContactMsgFlag=false;
+						}
+						else{
+							ContactMsgFlag=true;
+						}
+					}
+					if(NameFlag==true && ContactNoFlag==true && EmailIdFlag==true && ContactMsgFlag==true){
+						$("input,textarea").val("");
+						alert("Form submitted successfully..!!");
+					}
+					else{
+						alert("Invalid Input..!!");
+					}
+				});
+
+			});
+			
+    </script>
+    <style>
+        small{
+            color: red;
+        }
+    </style>
+		
+</head>
+<body>
+	<center>
+		<fieldset style="width:10%;">
+			<legend>JQUERY VALIDATIONS</legend>
+			
+		
+			<input type="text" id="Name" autofocus placeholder="enter the name here.." maxlength="40"/><br/>
+				<small id="NameValidation"></small>
+				<br>
+				<input type="text" id="ContactNo" placeholder="enter the contact no. here.." maxlength="10"/><br/>
+				<small id="ContactNoValidation"></small>
+				<br>
+				<input type="text" id="EmailId" placeholder="enter the email id here.." maxlength="50"/><br/>
+				<small id="EmailIdValidation"></small>
+				<br>
+				<textarea rows="5" id="ContactMsg" placeholder="enter the contact msg here.." maxlength="300"></textarea><br/>
+				<small id="ContactMsgValidation"></small>	
+				<br>
+				<button id="BtnSubmit">Submit</button>
+				<a href=""></a></li> 
+				</ul>
+	</center>
+	</fieldset>
+	
+</body>
+</html>
