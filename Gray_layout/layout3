@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        *{
+            font-size: 25px;
+        }
+        .r1{background: gray;width: 97%;margin-right: 1%;margin-left: 1%;margin-bottom: 20px;height: 40px;padding-top: 10px;padding-left: 1%;}
+        .r2{height:700px;width:98%;margin-right: 1%;margin-left: 1%}
+        .r2c1,.r2c2{height:600px;float:left;margin-bottom: 80px;}
+        .r2c1{width:30%;}
+		.r2c2{width:70%;}
+        .r2c2r1{height:150px;padding-top:120px;margin-bottom:10px;background-color:gray;text-align:center;}
+		.r2c2r2{height:230px;padding-top:170px;background-color:gray;text-align:center;}
+        .r3{background-color:gray;height:30px;width:98%;padding-top:5px;text-align:center;margin-bottom:5px;margin-right: 1%;margin-left: 1%}
+    </style>
+</head>
+<body>
+    <div class="r1">
+        Logo
+    </div>
+    <div class="r2">
+        <div class="r2c1">
+            Side bar Navigation
+        </div>
+        <div class="r2c2">
+            <div class="r2c2r1">Header/Banner</div>
+            <div class="r2c2r2">Body area</div>
+        </div>
+            
+        
+    </div>
+    <div class="r3">Footer</div>
+</body>
+</html>s
