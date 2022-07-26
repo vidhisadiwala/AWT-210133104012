@@ -1,0 +1,115 @@
+<html>
+
+<head>
+    <title>Grid </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <style type="text/css">
+        html {
+        box-sizing: border-box; }
+
+        *, *:before, *:after {box-sizing: inherit; }
+
+        .container {margin: 0 auto;max-width: 1000px;width: 90%; }
+
+        @media only screen and (min-width: 500px) {.container {width: 65%; } }
+
+        @media only screen and (min-width: 850px) {.container {width: 80%; } }
+        .container .row {margin-left: -0.75rem;margin-right: -0.75rem; }
+
+        .row {margin-left: auto;margin-right: auto;margin-bottom: 20px; }
+        .row:after {content: "";display: table;clear: both; }
+        .row .col {float: left;box-sizing: border-box;padding: 0 0.75rem; }
+        .row .col.s1 {width: 8.33333%;margin-left: 0; }
+        .row .col.s2 {width: 16.66667%;margin-left: 0; }
+        .row .col.s6 {width: 50%;margin-left: 0; }
+        .row .col.s12 {width: 100%;margin-left: 0; }
+        .row .col.offset-s3 {margin-left: 25%; }
+        .col {border: 1px solid black;background: skyblue;color: black;}
+    </style>
+</head>
+
+<body>
+    <center>
+    <div class="container">
+        <div class="row">
+            <div class="col s1">
+                <p>1</p>
+            </div>
+            <div class="col s1">
+                <p>2</p>
+            </div>
+            <div class="col s1">
+                <p>3</p>
+            </div>
+            <div class="col s1">
+                <p>4</p>
+            </div>
+            <div class="col s1">
+                <p>5</p>
+            </div>
+            <div class="col s1">
+                <p>6</p>
+            </div>
+            <div class="col s1">
+                <p>7</p>
+            </div>
+            <div class="col s1">
+                <p>8</p>
+            </div>
+            <div class="col s1">
+                <p>9</p>
+            </div>
+            <div class="col s1">
+                <p>10</p>
+            </div>
+            <div class="col s1">
+                <p>11</p>
+            </div>
+            <div class="col s1">
+                <p>12</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s2">
+                <p>1</p>
+            </div>
+            <div class="col s2">
+                <p>2</p>
+            </div>
+            <div class="col s2">
+                <p>3</p>
+            </div>
+            <div class="col s2">
+                <p>4</p>
+            </div>
+            <div class="col s2">
+                <p>5</p>
+            </div>
+            <div class="col s2">
+                <p>6</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <p>This div is 12-columns wide</p>
+            </div>
+            <div class="col s6">
+                <p>This div is 6-columns wide</p>
+            </div>
+            <div class="col s6">
+                <p>This div is 6-columns wide</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <p>This div is 12-columns wide on all screen sizes</p>
+            </div>
+            <div class="col s6 offset-s3">
+                <p>6-columns</p>
+            </div>
+        </div>
+    </center>
+</body>
+
+</html>
