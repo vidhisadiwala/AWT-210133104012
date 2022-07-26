@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+        body {font-family: verdana;background-color: skyblue;}
+
+        .flex-align-item-row {border: 4px solid #826a98;display: flex;height: 500px;align-items: stretch; }
+        
+        .flex-direction {border: 4px solid black;display: inline-flex;flex-direction: row; }
+        
+        .flex-container-item{border: 4px solid blue;display: inline-flex;}
+        
+        .flex-display {border: 4px solid blue;display: flex;}
+
+        .flex-wrap-row {border: 4px solid blue;display: flex;flex-wrap: wrap;height: 200px;}
+
+        .flex-wrap-column{border: 4px solid #826a98;display: flex; height: 300px; flex-direction: column; flex-wrap: wrap; }
+
+        .flex-flow-row {border: 4px solid #826a98; display: flex; flex-flow: row wrap; height:300px;}
+        
+        .flex-flow-column {border: 4px solid #826a98; display: flex; height: 200px;flex-flow: column wrap;}
+
+        .flex-justify-content-row {border: 4px solid #826a98;display: flex;  justify-content: space-evenly;}
+
+        .flex-justify-content-column{border: 4px solid #826a98;display: inline-flex;flex-direction: column-reverse;height: 500px;justify-content: space-between;}
+
+        .flex-align-item-column {border: 4px solid #826a98;display: flex; flex-direction: column;height: 600px;align-items: stretch; }
+
+        .flex-align-content-row {border: 4px solid #826a98; display: flex;height: 600px;flex-wrap: wrap;align-content: space-between; }
+
+        .flex-align-content-column {border: 4px solid #826a98;display: flex; height: 300px;flex-wrap: wrap;flex-direction: column;
+            align-content: space-between;  }
+
+        .flex-item-order {border: 4px solid #826a98;display: flex;}
+
+        
+        .navbar-container {background-color: yellow; border: 4px solid #826a98;font-size: 1rem}
+
+        .navbar-content {display: flex;justify-content: flex-end;}
+
+        .navbar-content, .nav-item {list-style: none;list-style-type: none;margin: 0;padding: 0;}
+
+        .nav-item {color: #000000;cursor: pointer;padding: 0.5rem 1.5rem;text-align: center;}
+
+        .nav-item:hover {color: #ffffff;background-color: #826a98;}
+
+        .container {background-color: #64A466;border: 4px solid #826a98;height: 500px;width: 500px;
+        display: flex;justify-content: center; align-items: center; }
+
+        .pro {color: #ffffff;font-size: 1rem;padding: 0.75rem;text-align: center;
+        }
+        
+        .navbar-container1 {background-color: #64A466;border: 4px solid #826a98;font-size: 1rem;}
+
+        .navbar-content1 {display: flex; }
+
+        .navbar-content1, .nav-item1 {list-style: none;list-style-type: none;margin: 0;padding: 0; }
+
+        .nav-item1 {color: #000000;cursor: pointer;padding: 0.5rem 1.5rem;text-align: center;flex: auto;}
+
+        .nav-item1:hover {color: #ffffff;background-color: #826a98;}
+
+        @media all and (max-width: 599px) {.navbar-content1 {flex-direction: column;} }
+
+        .box {height: 100px;width: 100px;background-color:#A6D5AE;}
+
+        .item {color: skyblue;font-size: 1rem;padding: 1px;text-align: center;margin: 1px;}
+        .flex-align-self{border: 4px solid #826a98;display: flex;height: 500px;align-items: flex-end;}
+
+        .item-1 {background-color: blue; }
+
+        .item-2 {background-color: yellow;}
+
+        .item-3 {background-color: pink;}
+
+        .item-4 {background-color: red;}
+
+        .item-5 {background-color: green;}
+
+        .item-6 {background-color: #ADE4CA;}
+
+        .item-7 {background-color: black;}
+
+        .item-8 {background-color: purple;}
+
+        .item-9 {background-color: #64A466;}
+
+        .item-10 {background-color: #2E8B56; }
+
+        .item-3-1{ background-color:#734F96;font-size: 3rem;}
+
+        .item-1-2 {background-color:yellow;padding-bottom: 2rem;font-family: cursive;}
+
+      .item-2-2 {background-color:green;padding-bottom: 3rem;padding-right: 5rem;}
+
+      .item-3-2 {background-color:#734F96;font-size: 3rem;}
+
+      .item-4-2 {background-color:#FBAED2;font-size: 8px;}
+
+      .item-2-3 {background-color:#BF94E4;align-self: flex-start;}
+
+      .item-5-3 { background-color:blue;font-size: 30px; align-self:center;}
+      
+      .item-8-3 { background-color:black;align-self: flex-start;}
+
+      .item-10-3 {background-color:#2E8B56;align-self: center;}
+
+
+    </style>
+</head>
+<body>
+    <p>1.4 flex-container-item</p>
+    <div class="flex-container-item">
+        <div class="item item-1">item-1</div>
+        <div class="item item-2">item-2</div>
+        <div class="item item-3">item-3</div>
+        <div class="item item-4">item-4</div>
+        <div class="item item-5">item-5</div>
+        <div class="item item-6">item-6</div>
+        <div class="item item-7">item-7</div>
+        <div class="item item-8">item-8</div>
+        <div class="item item-9">item-9</div>
+      </div><hr><hr>
+<!-- --------------------------------------------------------------------------------------------------------------------->
+    <p>2.1 flex-display</p>  
+    <div class="flex-display">
+      <div class="item item-1">item-1</div>
+      <div class="item item-2">item-2</div>
+      <div class="item item-3">item-3</div>
+      <div class="item item-4">item-4</div>
+      <div class="item item-5">item-5</div>
+    </div><hr><hr>
+<!-- --------------------------------------------------------------------------------------------------------------------->
+    <p>2.2 flex-direction</p> 
+    <div class="flex-direction">
+      <div class="item item-1">item-1</div>
+      <div class="item item-2">item-2</div>
+      <div class="item item-3">item-3</div>
+      <div class="item item-4">item-4</div>
+      <div class="item item-5">item-5</div>
+    </div><hr><hr>
+<!-- --------------------------------------------------------------------------------------------------------------------->
+      <p>2.3.1 flex-wrap-row</p>
+    <div class="flex-wrap-row">
+      <div class="item item-1">item-1</div>
+      <div class="item item-2">item-2</div>
+      <div class="item item-3">item-3</div>
+      <div class="item item-4">item-4</div>
+      <div class="item item-5">item-5</div>
+      <div class="item item-6">item-6</div>
+      <div class="item item-7">item-7</div>
+      <div class="item item-8">item-8</div>
+      <div class="item item-9">item-9</div>
+      <div class="item item-10">item-10</div>
+      <div class="item item-1">item-1</div>
+      <div class="item item-2">item-2</div>
+      <div class="item item-3">item-3</div>
+      <div class="item item-4">item-4</div>
+      <div class="item item-5">item-5</div>
+      <div class="item item-6">item-6</div>
+      <div class="item item-7">item-7</div>
+      <div class="item item-8">item-8</div>
+      <div class="item item-9">item-9</div>
+      <div class="item item-10">item-10</div>
+      <div class="item item-5">item-5</div>
+      <div class="item item-6">item-6</div>
+      <div class="item item-7">item-7</div>
+      <div class="item item-8">item-8</div>
+      <div class="item item-9">item-9</div>
+      <div class="item item-10">item-10</div>
+    </div><hr><hr>
+<!-- --------------------------------------------------------------------------------------------------------------------->
+    <p>2.3.1 flex-wrap-column</p>
+    <div class="-flex-wrap-column">
+      <div class="item item-1">item-1</div>
+      <div class="item item-2">item-2</div>
+      <div class="item item-3">item-3</div>
+      <div class="item item-4">item-4</div>
+      <div class="item item-5">item-5</div>
+      <div class="item item-6">item-6</div>
+      <div class="item item-7">item-7</div>
+      <div class="item item-8">item-8</div>
+      <div class="item item-9">item-9</div>
+      <div class="item item-10">item-10</div>
+      <div class="item item-1">item-1</div>
+      <div class="item item-2">item-2</div>
+      <div class="item item-3">item-3</div>
+      <div class="item item-4">item-4</div>
+      <div class="item item-5">item-5</div>
+      <div class="item item-6">item-6</div>
+      <div class="item item-7">item-7</div>
+      <div class="item item-8">item-8</div>
+      <div class="item item-9">item-9</div>
+      <div class="item item-10">item-10</div>
+    </div><hr><hr>
+<!-- --------------------------------------------------------------------------------------------------------------------->
+    <p>2.4.1 flex-flow-row</p>
+    <div class="flex-flow-row">
+      <div class="item item-1">item-1</div>
+      <div class="item item-2">item-2</div>
+      <div class="item item-3">item-3</div>
+      <div class="item item-4">item-4</div>
+      <div class="item item-5">item-5</div>
+      <div class="item item-6">item-6</div>
+      <div class="item item-7">item-7</div>
+      <div class="item item-8">item-8</div>
+      <div class="item item-9">item-9</div>
+      <div class="item item-10">item-10</div>
+      <div class="item item-1">item-1</div>
+      <div class="item item-2">item-2</div>
+      <div class="item item-3">item-3</div>
+      <div class="item item-4">item-4</div>
+      <div class="item item-5">item-5</div>
+      <div class="item item-6">item-6</div>
+      <div class="item item-7">item-7</div>
+      <div class="item item-8">item-8</div>
+      <div class="item item-9">item-9</div>
+      <div class="item item-10">item-10</div>
+    </div><hr><hr>
+<!-- --------------------------------------------------------------------------------------------------------------------->
+    <p> 2.4.2 flex-flow-column</p>
+    <div class="flex-flow-column">
+      <div class="item item-1">item-1</div>
+      <div class="item item-2">item-2</div>
+      <div class="item item-3">item-3</div>
+      <div class="item item-4">item-4</div>
+      <div class="item item-5">item-5</div>
+      <div class="item item-6">item-6</div>
+      <div class="item item-7">item-7</div>
+      <div class="item item-8">item-8</div>
+      <div class="item item-9">item-9</div>
+      <div class="item item-10">item-10</div>
+    </div><hr><hr>
+<!-- --------------------------------------------------------------------------------------------------------------------->
+    <p>2.5.1 -flex-justify-content-row</p>
+    <div class="flex-justify-content-row">
+      <div class="item item-1">item-1</div>
+      <div class="item item-2">item-2</div>
+      <div class="item item-3">item-3</div>
+      <div class="item item-4">item-4</div>
+      <div class="item item-5">item-5</div>
+      <div class="item item-6">item-6</div>
+      <div class="item item-7">item-7</div>
+      <div class="item item-8">item-8</div>
+      <div class="item item-9">item-9</div>
+      <div class="item item-10">item-10</div>
+    </div><hr><hr>
+<!-- --------------------------------------------------------------------------------------------------------------------->
+    <p>2.5.2 -flex-justify-content-column</p>
+    <div class="flex-justify-content-column">
+      <div class="item item-1">item-1</div>
+      <div class="item item-2">item-2</div>
+      <div class="item item-3">item-3</div>
+      <div class="item item-4">item-4</div>
+      <div class="item item-5">item-5</div>
+      <div class="item item-6">item-6</div>
+      <div class="item item-7">item-7</div>
+      <div class="item item-8">item-8</div>
+      <div class="item item-9">item-9</div>
+      <div class="item item-10">item-10</div>
+    </div><hr><hr>
+<!-- --------------------------------------------------------------------------------------------------------------------->
+    <p>2.6.1 flex-align-item-row</p>
+    <div class="flex-align-item-row">
+      <div class="item item-1">item-1</div>
+      <div class="item item-2">item-2</div>
+      <div class="item item-3-1">item-3</div>
+      <div class="item item-4">item-4</div>
+      <div class="item item-5">item-5</div>
+      <div class="item item-6">item-6</div>
+      <div class="item item-7">item-7</div>
+      <div class="item item-8">item-8</div>
+      <div class="item item-9">item-9</div>
+      <div class="item item-10">item-10</div>
+    </div><hr><hr>
+<!-- --------------------------------------------------------------------------------------------------------------------->
+    <p>2.6.2 flex-align-item-column</p>
+    <div class="flex-align-item-column">
+      <div class="item item-1-2">item-1</div>
+      <div class="item item-2-2">item-2</div>
+      <div class="item item-3-2">item-3</div>
+      <div class="item item-4-2">item-4</div>
+      <div class="item item-5">item-5</div>
+      <div class="item item-6">item-6</div>
+      <div class="item item-7">item-7</div>
+      <div class="item item-8">item-8</div>
+      <div class="item item-9">item-9</div>
+      <div class="item item-10">item-10</div>
+    </div><hr><hr>
+<!-- --------------------------------------------------------------------------------------------------------------------->
+    <p>2.7.1 -flex-align-content-row</p>
+    <div class="flex-align-content-row">
+      <div class="item item-1">item-1</div>
+      <div class="item item-2">item-2</div>
+      <div class="item item-3">item-3</div>
+      <div class="item item-4">item-4</div>
+      <div class="item item-5">item-5</div>
+      <div class="item item-6">item-6</div>
+      <div class="item item-7">item-7</div>
+      <div class="item item-8">item-8</div>
+      <div class="item item-9">item-9</div>
+      <div class="item item-10">item-10</div>
+	    <div class="item item-1">item-1</div>
+      <div class="item item-2">item-2</div>
+      <div class="item item-3">item-3</div>
+      <div class="item item-4">item-4</div>
+      <div class="item item-5">item-5</div>
+      <div class="item item-6">item-6</div>
+      <div class="item item-7">item-7</div>
+      <div class="item item-8">item-8</div>
+      <div class="item item-9">item-9</div>
+      <div class="item item-10">item-10</div>
+      <div class="item item-1">item-1</div>
+      <div class="item item-2">item-2</div>
+      <div class="item item-3">item-3</div>
+      <div class="item item-4">item-4</div>
+      <div class="item item-5">item-5</div>
+      <div class="item item-6">item-6</div>
+      <div class="item item-7">item-7</div>
+      <div class="item item-8">item-8</div>
+      <div class="item item-9">item-9</div>
+      <div class="item item-10">item-10</div>
+    </div><hr><hr>
+<!-- --------------------------------------------------------------------------------------------------------------------->
+    <p>2.7.2 -flex-align-content-column</p>
+    <div class="flex-align-content-column">
+      <div class="item item-1">item-1</div>
+      <div class="item item-2">item-2</div>
+      <div class="item item-3">item-3</div>
+      <div class="item item-4">item-4</div>
+      <div class="item item-5">item-5</div>
+      <div class="item item-6">item-6</div>
+      <div class="item item-7">item-7</div>
+      <div class="item item-8">item-8</div>
+      <div class="item item-9">item-9</div>
+      <div class="item item-10">item-10</div> 
+      <div class="item item-1">item-1</div>
+      <div class="item item-2">item-2</div>
+      <div class="item item-3">item-3</div>
+      <div class="item item-4">item-4</div>
+      <div class="item item-5">item-5</div>
+      <div class="item item-6">item-6</div>
+      <div class="item item-7">item-7</div>
+      <div class="item item-8">item-8</div>
+      <div class="item item-9">item-9</div>
+      <div class="item item-10">item-10</div> 
+    </div><hr><hr>
+<!-- --------------------------------------------------------------------------------------------------------------------->
+    <p>3.1 -flex-item-order</p>
+    <div class="flex-item-order">
+      <div class="item item-1">item-1</div>
+      <div class="item item-2">item-2</div>
+      <div class="item item-3">item-3</div>
+      <div class="item item-4">item-4</div>
+      <div class="item item-5">item-5</div>
+      <div class="item item-6">item-6</div>
+      <div class="item item-7">item-7</div>
+      <div class="item item-8">item-8</div>
+      <div class="item item-9">item-9</div>
+      <div class="item item-10">item-10</div>
+    </div><hr><hr>
+<!-- --------------------------------------------------------------------------------------------------------------------->
+    <p>3.6 flex-align-self</p>
+    <div class="flex-align-self">
+      <div class="item item-1">item-1 <br/> flex-start</div>
+      <div class="item item-2-3">item-2 <br/> flex-end</div>
+      <div class="item item-3">item-3 <br/> center</div>
+      <div class="item item-4">item-4 <br/> stretch</div>
+      <div class="item item-5-3">item-5</div>
+      <div class="item item-6">item-6</div>
+      <div class="item item-7">item-7</div>
+      <div class="item item-8-3">item-8</div>
+      <div class="item item-9">item-9</div>
+      <div class="item item-10-3">item-10</div>
+    </div><hr><hr>
+<!-- --------------------------------------------------------------------------------------------------------------------->
+    <p>4.1 flex-demo-perfect-center</p>
+    <div class="container">
+      <div class="pro box">item-1</div>
+    </div><hr><hr>
+<!-- --------------------------------------------------------------------------------------------------------------------->
+    <p>4.2.1 flex-demo-simple-navbar</p>
+    <nav class="navbar-container">
+<!-- --------------------------------------------------------------------------------------------------------------------->
+      <ul class="navbar-content">
+        <li class="nav-item nav-item-1">Home</li>
+        <li class="nav-item nav-item-2">About Us</li>
+        <li class="nav-item nav-item-3">Services</li>
+        <li class="nav-item nav-item-4">Products</li>
+        <li class="nav-item nav-item-5">Contact Us</div>
+      </ul>
+    </nav><hr><hr>
+<!-- --------------------------------------------------------------------------------------------------------------------->
+    <p>4.2.2 -flex-demo-responsive-navbar</p>
+    <nav class="navbar-container1">
+      <ul class="navbar-content1">
+        <li class="nav-item1 nav-item-1">Home</li>
+        <li class="nav-item1 nav-item-2">About Us</li>
+        <li class="nav-item1 nav-item-3">Services</li>
+        <li class="nav-item1 nav-item-4">Products</li>
+        <li class="nav-item1 nav-item-5">Contact Us</div>
+      </ul>
+</body>
+</html>
