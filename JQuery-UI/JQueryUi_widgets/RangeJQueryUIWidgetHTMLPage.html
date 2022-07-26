@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang = "en">
+   <head>
+    <meta charset="utf-8">
+    <meta name="color-scheme" content="light dark">
+      <title>Range Slider Control JQuery UI</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet" type="text/css" />
+      <script src = "https://code.jquery.com/jquery-1.10.2.js" type="text/javascript"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js" type="text/javascript"></script>
+      
+      <script type="text/javascript">
+          $(document).ready(function() {
+              $("#BudgetRangeSlide").slider({
+                  orientation:"horizontal",
+                  min: 10,
+                  max: 100,
+                  value: 10,
+                  slide: function (event, ui) {
+                      $("#bValue").val(ui.value);
+                  }
+              });
+              $("#bValue").val($("#BudgetRangeSlide").slider("value"));
+
+              $("#PriceValue").slider({
+                  range: true,
+                  min: 1,
+                  max: 1000,
+                  values: [1, 50],
+                  start: function (event, ui) {
+                      $("#startvalue")
+                     .val("$" + ui.values[0]);
+                  },
+                  stop: function (event, ui) {
+                      $("#endvalue")
+                     .val("$" + ui.values[1]);
+                  },
+                  change: function (event, ui) {
+                      $("#changevalue")
+                     .val("$" + ui.values[0] + " - $" + ui.values[1]);
+                  },
+                  slide: function (event, ui) {
+                      $("#slidevalue")
+                     .val("$" + ui.values[0] + " - $" + ui.values[1]);
+                  }
+              });
+          });
+      </script>
+
+      <style type="text/css">
+            #bValue
+            {
+                width:50px;
+                height:40px;
+                font-size:large;
+                font-weight:bold;
+                color:Red;
+            }
+            #BudgetRangeSlide,#PriceValue
+            {
+                width:300px;
+            }
+            #startvalue,#endvalue,#changevalue,#slidevalue
+            {
+                width:150px;
+                height:30px;
+                font-size:large;
+                font-weight:bold;
+                color:white;
+            }
+            .main{border: 2px solid black;}
+            body{background-color: aqua;margin-left: 20px;color: black;}
+      </style>
+   </head>
+   
+   <body>
+    <div class="main">
+        <h3>Enter your shirt size</h3>
+        <p>
+            <label for="bValue">Enter Your Budget:</label>
+            <input type="text" id="bValue" disabled="true"/>
+         </p>
+         
+         <div id="BudgetRangeSlide"></div>
+         
+         <hr />
+   
+         <div id = "PriceValue"></div>
+   
+         <p>
+            <label for = "startvalue">Start Value:</label>
+            <input type = "text" id = "startvalue" disabled="true">
+         </p>
+         <p>
+            <label for = "endvalue">End Value:</label>
+            <input type = "text" id = "endvalue" disabled="true">
+         </p>
+         <p>
+            <label for = "changevalue">Change In Range:</label>
+            <input type = "text" id = "changevalue" disabled="true">
+         </p>
+         <p>
+            <label for = "slidevalue">Slide Gap Value:</label>
+            <input type = "text" id = "slidevalue" disabled="true">
+         </p>
+   
+    </div>
+      
+   </body>
+</html>
